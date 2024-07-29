@@ -93,6 +93,7 @@ DATABASES = {}
 
 if os.getenv('PROD'):
     print("prod")
+    print("os.getenv('DB_URL':",os.getenv('DB_URL'))
     DATABASES['default'] = dj_database_url.parse(os.getenv('DB_URL'))
 else:
     DATABASES = {
